@@ -6,7 +6,23 @@
     <title>Sign In Form</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">">
-    
+  <script type="text/javascript">
+function validate()
+{
+    var username=document.getElementById("mail-id");
+    var password=document.getElementById("password");
+    if(username.value.trim()=="" ||password.value.trim()=="")
+    {
+        alert("Blank fields are not allowed");
+        return false;
+
+    }
+    else{
+        return true;
+
+    }
+}
+</script>  
 </head>
 <body>
     <div class="outerline">
@@ -22,7 +38,7 @@
         
         
         <div class="form-bg">
-            <form class="form-sign-in">
+            <form onsubmit="return validate()" class="form-sign-in" action="message.html">
                 <div class="form-input-wrapper">
                     <i class="fa fa-user icon"></i>
                     <input type="text" class="form-input"  id="mail-id" placeholder="mail@example.com"/>
@@ -36,7 +52,7 @@
                 </div>
                 
                 
-                <input type="submit" value="SIGN IN" class="form-btn"/>
+                <input  type="submit" value="submit"class="form-btn"/>
                 <br>
                 &nbsp;&nbsp;&nbsp; forgot your password? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Register!
                <br><br>
